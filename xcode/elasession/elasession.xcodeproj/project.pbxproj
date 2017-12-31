@@ -1,0 +1,380 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A3063D5B1FF88812001405A7 /* fdset.h in Headers */ = {isa = PBXBuildFile; fileRef = A3063D501FF88812001405A7 /* fdset.h */; };
+		A3063D5C1FF88812001405A7 /* multiplex_handler.h in Headers */ = {isa = PBXBuildFile; fileRef = A3063D511FF88812001405A7 /* multiplex_handler.h */; };
+		A3063D5D1FF88812001405A7 /* flex_buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = A3063D521FF88812001405A7 /* flex_buffer.h */; };
+		A3063D5E1FF88812001405A7 /* ice.h in Headers */ = {isa = PBXBuildFile; fileRef = A3063D531FF88812001405A7 /* ice.h */; };
+		A3063D5F1FF88812001405A7 /* ela_session.h in Headers */ = {isa = PBXBuildFile; fileRef = A3063D541FF88812001405A7 /* ela_session.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3063D601FF88812001405A7 /* portforwarding.h in Headers */ = {isa = PBXBuildFile; fileRef = A3063D551FF88812001405A7 /* portforwarding.h */; };
+		A3063D611FF88812001405A7 /* session.h in Headers */ = {isa = PBXBuildFile; fileRef = A3063D561FF88812001405A7 /* session.h */; };
+		A3063D621FF88812001405A7 /* stream_handler.h in Headers */ = {isa = PBXBuildFile; fileRef = A3063D571FF88812001405A7 /* stream_handler.h */; };
+		A3063D631FF88812001405A7 /* portforwardings.h in Headers */ = {isa = PBXBuildFile; fileRef = A3063D581FF88812001405A7 /* portforwardings.h */; };
+		A3063D641FF88812001405A7 /* services.h in Headers */ = {isa = PBXBuildFile; fileRef = A3063D591FF88812001405A7 /* services.h */; };
+		A3063D651FF88812001405A7 /* udp_eventfd.h in Headers */ = {isa = PBXBuildFile; fileRef = A3063D5A1FF88812001405A7 /* udp_eventfd.h */; };
+		A3063D6B1FF8882C001405A7 /* gqueue.h in Headers */ = {isa = PBXBuildFile; fileRef = A3063D671FF8882C001405A7 /* gqueue.h */; };
+		A3063D6C1FF8882C001405A7 /* gfake.h in Headers */ = {isa = PBXBuildFile; fileRef = A3063D681FF8882C001405A7 /* gfake.h */; };
+		A3063D6D1FF8882C001405A7 /* glist.h in Headers */ = {isa = PBXBuildFile; fileRef = A3063D691FF8882C001405A7 /* glist.h */; };
+		A3063D6E1FF8882C001405A7 /* pseudotcp.h in Headers */ = {isa = PBXBuildFile; fileRef = A3063D6A1FF8882C001405A7 /* pseudotcp.h */; };
+		A3063D771FF88842001405A7 /* session.c in Sources */ = {isa = PBXBuildFile; fileRef = A3063D6F1FF88842001405A7 /* session.c */; };
+		A3063D781FF88842001405A7 /* portforwarding.c in Sources */ = {isa = PBXBuildFile; fileRef = A3063D701FF88842001405A7 /* portforwarding.c */; };
+		A3063D791FF88842001405A7 /* multiplex_handler.c in Sources */ = {isa = PBXBuildFile; fileRef = A3063D711FF88842001405A7 /* multiplex_handler.c */; };
+		A3063D7A1FF88842001405A7 /* udp_eventfd.c in Sources */ = {isa = PBXBuildFile; fileRef = A3063D721FF88842001405A7 /* udp_eventfd.c */; };
+		A3063D7B1FF88842001405A7 /* crypto_handler.c in Sources */ = {isa = PBXBuildFile; fileRef = A3063D731FF88842001405A7 /* crypto_handler.c */; };
+		A3063D7C1FF88842001405A7 /* fdset.c in Sources */ = {isa = PBXBuildFile; fileRef = A3063D741FF88842001405A7 /* fdset.c */; };
+		A3063D7D1FF88842001405A7 /* reliable_handler.c in Sources */ = {isa = PBXBuildFile; fileRef = A3063D751FF88842001405A7 /* reliable_handler.c */; };
+		A3063D7E1FF88842001405A7 /* ice.c in Sources */ = {isa = PBXBuildFile; fileRef = A3063D761FF88842001405A7 /* ice.c */; };
+		A3063D801FF88850001405A7 /* channels.h in Headers */ = {isa = PBXBuildFile; fileRef = A3063D7F1FF88850001405A7 /* channels.h */; };
+		A3063D851FF88882001405A7 /* gqueue.c in Sources */ = {isa = PBXBuildFile; fileRef = A3063D821FF88882001405A7 /* gqueue.c */; };
+		A3063D861FF88882001405A7 /* glist.c in Sources */ = {isa = PBXBuildFile; fileRef = A3063D831FF88882001405A7 /* glist.c */; };
+		A3063D871FF88882001405A7 /* pseudotcp.c in Sources */ = {isa = PBXBuildFile; fileRef = A3063D841FF88882001405A7 /* pseudotcp.c */; };
+		A3063D891FF888C8001405A7 /* libelacarrier.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A3063D901FF888C8001405A7 /* libelacarrier.dylib */; };
+		A3063D8A1FF888C8001405A7 /* libelacommon.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A3063D911FF888C8001405A7 /* libelacommon.dylib */; };
+		A3063D8B1FF888C8001405A7 /* libpj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3063D921FF888C8001405A7 /* libpj.a */; };
+		A3063D8C1FF888C8001405A7 /* libpjlib-util.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3063D931FF888C8001405A7 /* libpjlib-util.a */; };
+		A3063D8D1FF888C8001405A7 /* libpjmedia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3063D941FF888C8001405A7 /* libpjmedia.a */; };
+		A3063D8E1FF888C8001405A7 /* libpjnath.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3063D951FF888C8001405A7 /* libpjnath.a */; };
+		A3063D8F1FF888C8001405A7 /* libsodium.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3063D961FF888C8001405A7 /* libsodium.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A3063CCE1FF883CD001405A7 /* libelasession.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libelasession.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3063D501FF88812001405A7 /* fdset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fdset.h; path = ../../src/session/fdset.h; sourceTree = "<group>"; };
+		A3063D511FF88812001405A7 /* multiplex_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = multiplex_handler.h; path = ../../src/session/multiplex_handler.h; sourceTree = "<group>"; };
+		A3063D521FF88812001405A7 /* flex_buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = flex_buffer.h; path = ../../src/session/flex_buffer.h; sourceTree = "<group>"; };
+		A3063D531FF88812001405A7 /* ice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ice.h; path = ../../src/session/ice.h; sourceTree = "<group>"; };
+		A3063D541FF88812001405A7 /* ela_session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ela_session.h; path = ../../src/session/ela_session.h; sourceTree = "<group>"; };
+		A3063D551FF88812001405A7 /* portforwarding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = portforwarding.h; path = ../../src/session/portforwarding.h; sourceTree = "<group>"; };
+		A3063D561FF88812001405A7 /* session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = session.h; path = ../../src/session/session.h; sourceTree = "<group>"; };
+		A3063D571FF88812001405A7 /* stream_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stream_handler.h; path = ../../src/session/stream_handler.h; sourceTree = "<group>"; };
+		A3063D581FF88812001405A7 /* portforwardings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = portforwardings.h; path = ../../src/session/portforwardings.h; sourceTree = "<group>"; };
+		A3063D591FF88812001405A7 /* services.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = services.h; path = ../../src/session/services.h; sourceTree = "<group>"; };
+		A3063D5A1FF88812001405A7 /* udp_eventfd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = udp_eventfd.h; path = ../../src/session/udp_eventfd.h; sourceTree = "<group>"; };
+		A3063D671FF8882C001405A7 /* gqueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gqueue.h; path = ../../src/session/pseudotcp/gqueue.h; sourceTree = "<group>"; };
+		A3063D681FF8882C001405A7 /* gfake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gfake.h; path = ../../src/session/pseudotcp/gfake.h; sourceTree = "<group>"; };
+		A3063D691FF8882C001405A7 /* glist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = glist.h; path = ../../src/session/pseudotcp/glist.h; sourceTree = "<group>"; };
+		A3063D6A1FF8882C001405A7 /* pseudotcp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pseudotcp.h; path = ../../src/session/pseudotcp/pseudotcp.h; sourceTree = "<group>"; };
+		A3063D6F1FF88842001405A7 /* session.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = session.c; path = ../../src/session/session.c; sourceTree = "<group>"; };
+		A3063D701FF88842001405A7 /* portforwarding.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = portforwarding.c; path = ../../src/session/portforwarding.c; sourceTree = "<group>"; };
+		A3063D711FF88842001405A7 /* multiplex_handler.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = multiplex_handler.c; path = ../../src/session/multiplex_handler.c; sourceTree = "<group>"; };
+		A3063D721FF88842001405A7 /* udp_eventfd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = udp_eventfd.c; path = ../../src/session/udp_eventfd.c; sourceTree = "<group>"; };
+		A3063D731FF88842001405A7 /* crypto_handler.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = crypto_handler.c; path = ../../src/session/crypto_handler.c; sourceTree = "<group>"; };
+		A3063D741FF88842001405A7 /* fdset.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fdset.c; path = ../../src/session/fdset.c; sourceTree = "<group>"; };
+		A3063D751FF88842001405A7 /* reliable_handler.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = reliable_handler.c; path = ../../src/session/reliable_handler.c; sourceTree = "<group>"; };
+		A3063D761FF88842001405A7 /* ice.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ice.c; path = ../../src/session/ice.c; sourceTree = "<group>"; };
+		A3063D7F1FF88850001405A7 /* channels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = channels.h; path = ../../src/session/channels.h; sourceTree = "<group>"; };
+		A3063D821FF88882001405A7 /* gqueue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gqueue.c; path = ../../src/session/pseudotcp/gqueue.c; sourceTree = "<group>"; };
+		A3063D831FF88882001405A7 /* glist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = glist.c; path = ../../src/session/pseudotcp/glist.c; sourceTree = "<group>"; };
+		A3063D841FF88882001405A7 /* pseudotcp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pseudotcp.c; path = ../../src/session/pseudotcp/pseudotcp.c; sourceTree = "<group>"; };
+		A3063D901FF888C8001405A7 /* libelacarrier.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libelacarrier.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3063D911FF888C8001405A7 /* libelacommon.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libelacommon.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3063D921FF888C8001405A7 /* libpj.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libpj.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3063D931FF888C8001405A7 /* libpjlib-util.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libpjlib-util.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3063D941FF888C8001405A7 /* libpjmedia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libpjmedia.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3063D951FF888C8001405A7 /* libpjnath.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libpjnath.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3063D961FF888C8001405A7 /* libsodium.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libsodium.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3063CCB1FF883CD001405A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3063D891FF888C8001405A7 /* libelacarrier.dylib in Frameworks */,
+				A3063D8A1FF888C8001405A7 /* libelacommon.dylib in Frameworks */,
+				A3063D8B1FF888C8001405A7 /* libpj.a in Frameworks */,
+				A3063D8C1FF888C8001405A7 /* libpjlib-util.a in Frameworks */,
+				A3063D8D1FF888C8001405A7 /* libpjmedia.a in Frameworks */,
+				A3063D8E1FF888C8001405A7 /* libpjnath.a in Frameworks */,
+				A3063D8F1FF888C8001405A7 /* libsodium.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A3063CC51FF883CD001405A7 = {
+			isa = PBXGroup;
+			children = (
+				A3063D2D1FF8859C001405A7 /* headers */,
+				A3063D2C1FF88597001405A7 /* src */,
+				A3063CCF1FF883CD001405A7 /* Products */,
+				A3063D881FF888C8001405A7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A3063CCF1FF883CD001405A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3063CCE1FF883CD001405A7 /* libelasession.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3063D2C1FF88597001405A7 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A3063D811FF8886C001405A7 /* pseudotcp */,
+				A3063D731FF88842001405A7 /* crypto_handler.c */,
+				A3063D741FF88842001405A7 /* fdset.c */,
+				A3063D761FF88842001405A7 /* ice.c */,
+				A3063D711FF88842001405A7 /* multiplex_handler.c */,
+				A3063D701FF88842001405A7 /* portforwarding.c */,
+				A3063D751FF88842001405A7 /* reliable_handler.c */,
+				A3063D6F1FF88842001405A7 /* session.c */,
+				A3063D721FF88842001405A7 /* udp_eventfd.c */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		A3063D2D1FF8859C001405A7 /* headers */ = {
+			isa = PBXGroup;
+			children = (
+				A3063D661FF88818001405A7 /* pseudotcp */,
+				A3063D541FF88812001405A7 /* ela_session.h */,
+				A3063D7F1FF88850001405A7 /* channels.h */,
+				A3063D501FF88812001405A7 /* fdset.h */,
+				A3063D521FF88812001405A7 /* flex_buffer.h */,
+				A3063D531FF88812001405A7 /* ice.h */,
+				A3063D511FF88812001405A7 /* multiplex_handler.h */,
+				A3063D551FF88812001405A7 /* portforwarding.h */,
+				A3063D581FF88812001405A7 /* portforwardings.h */,
+				A3063D591FF88812001405A7 /* services.h */,
+				A3063D561FF88812001405A7 /* session.h */,
+				A3063D571FF88812001405A7 /* stream_handler.h */,
+				A3063D5A1FF88812001405A7 /* udp_eventfd.h */,
+			);
+			name = headers;
+			sourceTree = "<group>";
+		};
+		A3063D661FF88818001405A7 /* pseudotcp */ = {
+			isa = PBXGroup;
+			children = (
+				A3063D681FF8882C001405A7 /* gfake.h */,
+				A3063D691FF8882C001405A7 /* glist.h */,
+				A3063D671FF8882C001405A7 /* gqueue.h */,
+				A3063D6A1FF8882C001405A7 /* pseudotcp.h */,
+			);
+			name = pseudotcp;
+			sourceTree = "<group>";
+		};
+		A3063D811FF8886C001405A7 /* pseudotcp */ = {
+			isa = PBXGroup;
+			children = (
+				A3063D831FF88882001405A7 /* glist.c */,
+				A3063D821FF88882001405A7 /* gqueue.c */,
+				A3063D841FF88882001405A7 /* pseudotcp.c */,
+			);
+			name = pseudotcp;
+			sourceTree = "<group>";
+		};
+		A3063D881FF888C8001405A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3063D901FF888C8001405A7 /* libelacarrier.dylib */,
+				A3063D911FF888C8001405A7 /* libelacommon.dylib */,
+				A3063D921FF888C8001405A7 /* libpj.a */,
+				A3063D931FF888C8001405A7 /* libpjlib-util.a */,
+				A3063D941FF888C8001405A7 /* libpjmedia.a */,
+				A3063D951FF888C8001405A7 /* libpjnath.a */,
+				A3063D961FF888C8001405A7 /* libsodium.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A3063CCC1FF883CD001405A7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3063D5F1FF88812001405A7 /* ela_session.h in Headers */,
+				A3063D6C1FF8882C001405A7 /* gfake.h in Headers */,
+				A3063D651FF88812001405A7 /* udp_eventfd.h in Headers */,
+				A3063D611FF88812001405A7 /* session.h in Headers */,
+				A3063D631FF88812001405A7 /* portforwardings.h in Headers */,
+				A3063D5E1FF88812001405A7 /* ice.h in Headers */,
+				A3063D5C1FF88812001405A7 /* multiplex_handler.h in Headers */,
+				A3063D5D1FF88812001405A7 /* flex_buffer.h in Headers */,
+				A3063D601FF88812001405A7 /* portforwarding.h in Headers */,
+				A3063D5B1FF88812001405A7 /* fdset.h in Headers */,
+				A3063D641FF88812001405A7 /* services.h in Headers */,
+				A3063D6B1FF8882C001405A7 /* gqueue.h in Headers */,
+				A3063D801FF88850001405A7 /* channels.h in Headers */,
+				A3063D6D1FF8882C001405A7 /* glist.h in Headers */,
+				A3063D621FF88812001405A7 /* stream_handler.h in Headers */,
+				A3063D6E1FF8882C001405A7 /* pseudotcp.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A3063CCD1FF883CD001405A7 /* elasession */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3063CD21FF883CD001405A7 /* Build configuration list for PBXNativeTarget "elasession" */;
+			buildPhases = (
+				A3063CCA1FF883CD001405A7 /* Sources */,
+				A3063CCB1FF883CD001405A7 /* Frameworks */,
+				A3063CCC1FF883CD001405A7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = elasession;
+			productName = elasession;
+			productReference = A3063CCE1FF883CD001405A7 /* libelasession.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A3063CC61FF883CD001405A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = io.iwhisper;
+				TargetAttributes = {
+					A3063CCD1FF883CD001405A7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A3063CC91FF883CD001405A7 /* Build configuration list for PBXProject "elasession" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A3063CC51FF883CD001405A7;
+			productRefGroup = A3063CCF1FF883CD001405A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A3063CCD1FF883CD001405A7 /* elasession */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A3063CCA1FF883CD001405A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3063D851FF88882001405A7 /* gqueue.c in Sources */,
+				A3063D7D1FF88842001405A7 /* reliable_handler.c in Sources */,
+				A3063D7C1FF88842001405A7 /* fdset.c in Sources */,
+				A3063D7B1FF88842001405A7 /* crypto_handler.c in Sources */,
+				A3063D791FF88842001405A7 /* multiplex_handler.c in Sources */,
+				A3063D871FF88882001405A7 /* pseudotcp.c in Sources */,
+				A3063D771FF88842001405A7 /* session.c in Sources */,
+				A3063D7A1FF88842001405A7 /* udp_eventfd.c in Sources */,
+				A3063D861FF88882001405A7 /* glist.c in Sources */,
+				A3063D781FF88842001405A7 /* portforwarding.c in Sources */,
+				A3063D7E1FF88842001405A7 /* ice.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A3063CD01FF883CD001405A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A3063CD31FF883CD001405A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/lib";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A3063CC91FF883CD001405A7 /* Build configuration list for PBXProject "elasession" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3063CD01FF883CD001405A7 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A3063CD21FF883CD001405A7 /* Build configuration list for PBXNativeTarget "elasession" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3063CD31FF883CD001405A7 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A3063CC61FF883CD001405A7 /* Project object */;
+}

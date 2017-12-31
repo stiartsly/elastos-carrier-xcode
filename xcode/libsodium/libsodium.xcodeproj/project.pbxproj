@@ -1,0 +1,262 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		A3063C671FF7B5E8001405A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3063C321FF7B4D2001405A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3063C361FF7B4D2001405A7;
+			remoteInfo = libsodium;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A3063C611FF7B5CB001405A7 /* libsodium.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsodium.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3063C661FF7B5D5001405A7 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3063C5E1FF7B5CB001405A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A3063C311FF7B4D2001405A7 = {
+			isa = PBXGroup;
+			children = (
+				A3063C661FF7B5D5001405A7 /* Makefile */,
+				A3063C621FF7B5CB001405A7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A3063C621FF7B5CB001405A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3063C611FF7B5CB001405A7 /* libsodium.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A3063C5F1FF7B5CB001405A7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXLegacyTarget section */
+		A3063C361FF7B4D2001405A7 /* libsodium */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = A3063C391FF7B4D2001405A7 /* Build configuration list for PBXLegacyTarget "libsodium" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			dependencies = (
+			);
+			name = libsodium;
+			passBuildSettingsInEnvironment = 1;
+			productName = libsodium;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		A3063C601FF7B5CB001405A7 /* sodium */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3063C631FF7B5CB001405A7 /* Build configuration list for PBXNativeTarget "sodium" */;
+			buildPhases = (
+				A3063C5D1FF7B5CB001405A7 /* Sources */,
+				A3063C5E1FF7B5CB001405A7 /* Frameworks */,
+				A3063C5F1FF7B5CB001405A7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A3063C681FF7B5E8001405A7 /* PBXTargetDependency */,
+			);
+			name = sodium;
+			productName = sodium;
+			productReference = A3063C611FF7B5CB001405A7 /* libsodium.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A3063C321FF7B4D2001405A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = io.iwhisper;
+				TargetAttributes = {
+					A3063C361FF7B4D2001405A7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					A3063C601FF7B5CB001405A7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A3063C351FF7B4D2001405A7 /* Build configuration list for PBXProject "libsodium" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A3063C311FF7B4D2001405A7;
+			productRefGroup = A3063C621FF7B5CB001405A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A3063C361FF7B4D2001405A7 /* libsodium */,
+				A3063C601FF7B5CB001405A7 /* sodium */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A3063C5D1FF7B5CB001405A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A3063C681FF7B5E8001405A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A3063C361FF7B4D2001405A7 /* libsodium */;
+			targetProxy = A3063C671FF7B5E8001405A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A3063C371FF7B4D2001405A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		A3063C3A1FF7B4D2001405A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A3063C641FF7B5CB001405A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A3063C351FF7B4D2001405A7 /* Build configuration list for PBXProject "libsodium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3063C371FF7B4D2001405A7 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A3063C391FF7B4D2001405A7 /* Build configuration list for PBXLegacyTarget "libsodium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3063C3A1FF7B4D2001405A7 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A3063C631FF7B5CB001405A7 /* Build configuration list for PBXNativeTarget "sodium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3063C641FF7B5CB001405A7 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A3063C321FF7B4D2001405A7 /* Project object */;
+}

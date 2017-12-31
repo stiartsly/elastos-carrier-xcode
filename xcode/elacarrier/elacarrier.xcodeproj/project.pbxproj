@@ -1,0 +1,322 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A3063D341FF885BD001405A7 /* ela_carrier_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = A3063D2E1FF885BD001405A7 /* ela_carrier_impl.h */; };
+		A3063D351FF885BD001405A7 /* elacp.h in Headers */ = {isa = PBXBuildFile; fileRef = A3063D2F1FF885BD001405A7 /* elacp.h */; };
+		A3063D361FF885BD001405A7 /* thistory.h in Headers */ = {isa = PBXBuildFile; fileRef = A3063D301FF885BD001405A7 /* thistory.h */; };
+		A3063D371FF885BD001405A7 /* friends.h in Headers */ = {isa = PBXBuildFile; fileRef = A3063D311FF885BD001405A7 /* friends.h */; };
+		A3063D381FF885BD001405A7 /* ela_carrier.h in Headers */ = {isa = PBXBuildFile; fileRef = A3063D321FF885BD001405A7 /* ela_carrier.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3063D391FF885BD001405A7 /* tcallbacks.h in Headers */ = {isa = PBXBuildFile; fileRef = A3063D331FF885BD001405A7 /* tcallbacks.h */; };
+		A3063D3D1FF885D6001405A7 /* dht.h in Headers */ = {isa = PBXBuildFile; fileRef = A3063D3B1FF885D6001405A7 /* dht.h */; };
+		A3063D3E1FF885D6001405A7 /* dht_callbacks.h in Headers */ = {isa = PBXBuildFile; fileRef = A3063D3C1FF885D6001405A7 /* dht_callbacks.h */; };
+		A3063D411FF885E7001405A7 /* elacp.c in Sources */ = {isa = PBXBuildFile; fileRef = A3063D3F1FF885E6001405A7 /* elacp.c */; };
+		A3063D421FF885E7001405A7 /* ela_carrier.c in Sources */ = {isa = PBXBuildFile; fileRef = A3063D401FF885E7001405A7 /* ela_carrier.c */; };
+		A3063D451FF885FA001405A7 /* dht.c in Sources */ = {isa = PBXBuildFile; fileRef = A3063D441FF885F9001405A7 /* dht.c */; };
+		A3063D471FF8863B001405A7 /* libelacommon.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A3063D4B1FF8863B001405A7 /* libelacommon.dylib */; };
+		A3063D481FF8863B001405A7 /* libflatcc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3063D4C1FF8863B001405A7 /* libflatcc.a */; };
+		A3063D491FF8863B001405A7 /* libsodium.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3063D4D1FF8863B001405A7 /* libsodium.a */; };
+		A3063D4A1FF8863B001405A7 /* libtoxcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3063D4E1FF8863B001405A7 /* libtoxcore.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A3063CDE1FF883E4001405A7 /* libelacarrier.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libelacarrier.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3063D2E1FF885BD001405A7 /* ela_carrier_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ela_carrier_impl.h; path = ../../src/carrier/ela_carrier_impl.h; sourceTree = "<group>"; };
+		A3063D2F1FF885BD001405A7 /* elacp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = elacp.h; path = ../../src/carrier/elacp.h; sourceTree = "<group>"; };
+		A3063D301FF885BD001405A7 /* thistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = thistory.h; path = ../../src/carrier/thistory.h; sourceTree = "<group>"; };
+		A3063D311FF885BD001405A7 /* friends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = friends.h; path = ../../src/carrier/friends.h; sourceTree = "<group>"; };
+		A3063D321FF885BD001405A7 /* ela_carrier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ela_carrier.h; path = ../../src/carrier/ela_carrier.h; sourceTree = "<group>"; };
+		A3063D331FF885BD001405A7 /* tcallbacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tcallbacks.h; path = ../../src/carrier/tcallbacks.h; sourceTree = "<group>"; };
+		A3063D3B1FF885D6001405A7 /* dht.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dht.h; path = ../../src/carrier/dht/dht.h; sourceTree = "<group>"; };
+		A3063D3C1FF885D6001405A7 /* dht_callbacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dht_callbacks.h; path = ../../src/carrier/dht/dht_callbacks.h; sourceTree = "<group>"; };
+		A3063D3F1FF885E6001405A7 /* elacp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = elacp.c; path = ../../src/carrier/elacp.c; sourceTree = "<group>"; };
+		A3063D401FF885E7001405A7 /* ela_carrier.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ela_carrier.c; path = ../../src/carrier/ela_carrier.c; sourceTree = "<group>"; };
+		A3063D441FF885F9001405A7 /* dht.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dht.c; path = ../../src/carrier/dht/dht.c; sourceTree = "<group>"; };
+		A3063D4B1FF8863B001405A7 /* libelacommon.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libelacommon.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3063D4C1FF8863B001405A7 /* libflatcc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libflatcc.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3063D4D1FF8863B001405A7 /* libsodium.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libsodium.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3063D4E1FF8863B001405A7 /* libtoxcore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libtoxcore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3063CDB1FF883E4001405A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3063D471FF8863B001405A7 /* libelacommon.dylib in Frameworks */,
+				A3063D481FF8863B001405A7 /* libflatcc.a in Frameworks */,
+				A3063D491FF8863B001405A7 /* libsodium.a in Frameworks */,
+				A3063D4A1FF8863B001405A7 /* libtoxcore.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A3063CD51FF883E4001405A7 = {
+			isa = PBXGroup;
+			children = (
+				A3063D2B1FF88586001405A7 /* headers */,
+				A3063D2A1FF8857B001405A7 /* src */,
+				A3063CDF1FF883E4001405A7 /* Products */,
+				A3063D461FF8863B001405A7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A3063CDF1FF883E4001405A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3063CDE1FF883E4001405A7 /* libelacarrier.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3063D2A1FF8857B001405A7 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A3063D431FF885EA001405A7 /* dht */,
+				A3063D401FF885E7001405A7 /* ela_carrier.c */,
+				A3063D3F1FF885E6001405A7 /* elacp.c */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		A3063D2B1FF88586001405A7 /* headers */ = {
+			isa = PBXGroup;
+			children = (
+				A3063D3A1FF885C2001405A7 /* dht */,
+				A3063D2E1FF885BD001405A7 /* ela_carrier_impl.h */,
+				A3063D321FF885BD001405A7 /* ela_carrier.h */,
+				A3063D2F1FF885BD001405A7 /* elacp.h */,
+				A3063D311FF885BD001405A7 /* friends.h */,
+				A3063D331FF885BD001405A7 /* tcallbacks.h */,
+				A3063D301FF885BD001405A7 /* thistory.h */,
+			);
+			name = headers;
+			sourceTree = "<group>";
+		};
+		A3063D3A1FF885C2001405A7 /* dht */ = {
+			isa = PBXGroup;
+			children = (
+				A3063D3C1FF885D6001405A7 /* dht_callbacks.h */,
+				A3063D3B1FF885D6001405A7 /* dht.h */,
+			);
+			name = dht;
+			sourceTree = "<group>";
+		};
+		A3063D431FF885EA001405A7 /* dht */ = {
+			isa = PBXGroup;
+			children = (
+				A3063D441FF885F9001405A7 /* dht.c */,
+			);
+			name = dht;
+			sourceTree = "<group>";
+		};
+		A3063D461FF8863B001405A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3063D4B1FF8863B001405A7 /* libelacommon.dylib */,
+				A3063D4C1FF8863B001405A7 /* libflatcc.a */,
+				A3063D4D1FF8863B001405A7 /* libsodium.a */,
+				A3063D4E1FF8863B001405A7 /* libtoxcore.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A3063CDC1FF883E4001405A7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3063D381FF885BD001405A7 /* ela_carrier.h in Headers */,
+				A3063D351FF885BD001405A7 /* elacp.h in Headers */,
+				A3063D361FF885BD001405A7 /* thistory.h in Headers */,
+				A3063D371FF885BD001405A7 /* friends.h in Headers */,
+				A3063D3E1FF885D6001405A7 /* dht_callbacks.h in Headers */,
+				A3063D391FF885BD001405A7 /* tcallbacks.h in Headers */,
+				A3063D341FF885BD001405A7 /* ela_carrier_impl.h in Headers */,
+				A3063D3D1FF885D6001405A7 /* dht.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A3063CDD1FF883E4001405A7 /* elacarrier */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3063CE21FF883E4001405A7 /* Build configuration list for PBXNativeTarget "elacarrier" */;
+			buildPhases = (
+				A3063D4F1FF886FF001405A7 /* ShellScript */,
+				A3063CDA1FF883E4001405A7 /* Sources */,
+				A3063CDB1FF883E4001405A7 /* Frameworks */,
+				A3063CDC1FF883E4001405A7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = elacarrier;
+			productName = elacarrier;
+			productReference = A3063CDE1FF883E4001405A7 /* libelacarrier.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A3063CD61FF883E4001405A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = io.iwhisper;
+				TargetAttributes = {
+					A3063CDD1FF883E4001405A7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A3063CD91FF883E4001405A7 /* Build configuration list for PBXProject "elacarrier" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A3063CD51FF883E4001405A7;
+			productRefGroup = A3063CDF1FF883E4001405A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A3063CDD1FF883E4001405A7 /* elacarrier */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A3063D4F1FF886FF001405A7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export ORCHID_SRC_DIR=${SOURCE_ROOT}/../../src/carrier\ncd ${ORCHID_SRC_DIR} && flatcc --outfile elacp_generated.h -a elacp.fbs";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A3063CDA1FF883E4001405A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3063D451FF885FA001405A7 /* dht.c in Sources */,
+				A3063D411FF885E7001405A7 /* elacp.c in Sources */,
+				A3063D421FF885E7001405A7 /* ela_carrier.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A3063CE01FF883E4001405A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A3063CE31FF883E4001405A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/lib";
+				OTHER_CFLAGS = "-DELASTOS_BUILD";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A3063CD91FF883E4001405A7 /* Build configuration list for PBXProject "elacarrier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3063CE01FF883E4001405A7 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A3063CE21FF883E4001405A7 /* Build configuration list for PBXNativeTarget "elacarrier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3063CE31FF883E4001405A7 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A3063CD61FF883E4001405A7 /* Project object */;
+}
