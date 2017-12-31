@@ -864,7 +864,7 @@ static void session_request_callback(ElaCarrier *w, const char *from,
     output("Reply use following commands:\n");
     output("  sreply refuse [reason]\n");
     output("OR:\n");
-    output("  1. snew %s [ice | udp | tcp ]\n", from);
+    output("  1. snew %s\n", from);
     output("  2. sadd [plain] [reliable] [multiplexing] [portforwarding]\n");
     output("  3. sreply ok\n");
 }
