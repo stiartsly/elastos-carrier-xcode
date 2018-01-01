@@ -5,6 +5,9 @@
       location = "container:"
       name = "deps">
       <FileRef
+         location = "group:CUnit/CUnit.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:libconfuse/libconfuse.xcodeproj">
       </FileRef>
       <FileRef
@@ -39,5 +42,8 @@
    <Group
       location = "container:"
       name = "tests">
+      <FileRef
+         location = "group:api-tests/api-tests.xcodeproj">
+      </FileRef>
    </Group>
 </Workspace>

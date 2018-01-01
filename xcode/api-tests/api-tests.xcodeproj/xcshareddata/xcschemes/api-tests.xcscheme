@@ -14,48 +14,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A3063C601FF7B5CB001405A7"
-               BuildableName = "libsodium.a"
-               BlueprintName = "sodium"
-               ReferencedContainer = "container:../libsodium/libsodium.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A3063C6C1FF87BEB001405A7"
-               BuildableName = "libtoxcore.a"
-               BlueprintName = "toxcore"
-               ReferencedContainer = "container:../libtoxcore/libtoxcore.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A3063C781FF880D0001405A7"
-               BuildableName = "libflatcc.a"
-               BlueprintName = "flatcc"
-               ReferencedContainer = "container:../libflatcc/libflatcc.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "A3063CED1FF88405001405A7"
                BuildableName = "libelacommon.dylib"
                BlueprintName = "elacommon"
@@ -73,7 +31,63 @@
                BlueprintIdentifier = "A3063CDD1FF883E4001405A7"
                BuildableName = "libelacarrier.dylib"
                BlueprintName = "elacarrier"
-               ReferencedContainer = "container:elacarrier.xcodeproj">
+               ReferencedContainer = "container:../elacarrier/elacarrier.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A3063CCD1FF883CD001405A7"
+               BuildableName = "libelasession.dylib"
+               BlueprintName = "elasession"
+               ReferencedContainer = "container:../elasession/elasession.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A3063CBD1FF88335001405A7"
+               BuildableName = "libconfuse.a"
+               BlueprintName = "confuse"
+               ReferencedContainer = "container:../libconfuse/libconfuse.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A39BD1161FF9D9BD00401F6F"
+               BuildableName = "libcunit.a"
+               BlueprintName = "cunit"
+               ReferencedContainer = "container:../CUnit/CUnit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A39BD0B81FF9D7E400401F6F"
+               BuildableName = "api-tests"
+               BlueprintName = "api-tests"
+               ReferencedContainer = "container:api-tests.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -89,10 +103,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A3063CDD1FF883E4001405A7"
-            BuildableName = "libelacarrier.dylib"
-            BlueprintName = "elacarrier"
-            ReferencedContainer = "container:elacarrier.xcodeproj">
+            BlueprintIdentifier = "A39BD0B81FF9D7E400401F6F"
+            BuildableName = "api-tests"
+            BlueprintName = "api-tests"
+            ReferencedContainer = "container:api-tests.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -109,15 +123,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A3063CDD1FF883E4001405A7"
-            BuildableName = "libelacarrier.dylib"
-            BlueprintName = "elacarrier"
-            ReferencedContainer = "container:elacarrier.xcodeproj">
+            BlueprintIdentifier = "A39BD0B81FF9D7E400401F6F"
+            BuildableName = "api-tests"
+            BlueprintName = "api-tests"
+            ReferencedContainer = "container:api-tests.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -127,15 +142,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A3063CDD1FF883E4001405A7"
-            BuildableName = "libelacarrier.dylib"
-            BlueprintName = "elacarrier"
-            ReferencedContainer = "container:elacarrier.xcodeproj">
+            BlueprintIdentifier = "A39BD0B81FF9D7E400401F6F"
+            BuildableName = "api-tests"
+            BlueprintName = "api-tests"
+            ReferencedContainer = "container:api-tests.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

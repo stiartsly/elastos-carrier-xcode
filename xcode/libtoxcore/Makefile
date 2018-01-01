@@ -48,8 +48,8 @@ install: $(INSTALL_STATUS)
 
 clean:
 	if [ -d $(SRC_DIR) ]; then \
-            cd $(SRC_DIR) && make clean; \
-        fi
+        cd $(SRC_DIR) && make clean; \
+    fi
 	rm -f $(INSTALL_STATUS)
 	rm -f $(COMPILE_STATUS)
 	rm -f $(CONFIG_STATUS)

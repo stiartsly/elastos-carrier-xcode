@@ -14,24 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A3063C601FF7B5CB001405A7"
-               BuildableName = "libsodium.a"
-               BlueprintName = "sodium"
-               ReferencedContainer = "container:../libsodium/libsodium.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A3063CED1FF88405001405A7"
-               BuildableName = "libelacommon.dylib"
-               BlueprintName = "elacommon"
-               ReferencedContainer = "container:elacommon.xcodeproj">
+               BlueprintIdentifier = "A39BD10C1FF9D96100401F6F"
+               BuildableName = "CUnit"
+               BlueprintName = "CUnit"
+               ReferencedContainer = "container:CUnit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,15 +30,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A3063CED1FF88405001405A7"
-            BuildableName = "libelacommon.dylib"
-            BlueprintName = "elacommon"
-            ReferencedContainer = "container:elacommon.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -70,10 +47,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A3063CED1FF88405001405A7"
-            BuildableName = "libelacommon.dylib"
-            BlueprintName = "elacommon"
-            ReferencedContainer = "container:elacommon.xcodeproj">
+            BlueprintIdentifier = "A39BD10C1FF9D96100401F6F"
+            BuildableName = "CUnit"
+            BlueprintName = "CUnit"
+            ReferencedContainer = "container:CUnit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -88,10 +65,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A3063CED1FF88405001405A7"
-            BuildableName = "libelacommon.dylib"
-            BlueprintName = "elacommon"
-            ReferencedContainer = "container:elacommon.xcodeproj">
+            BlueprintIdentifier = "A39BD10C1FF9D96100401F6F"
+            BuildableName = "CUnit"
+            BlueprintName = "CUnit"
+            ReferencedContainer = "container:CUnit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
