@@ -436,3 +436,21 @@ cleanup:
     ela_session_cleanup(wctxt->carrier);
     robot_sfree();
 }
+
+const char* connection_str(enum ElaConnectionStatus status)
+{
+    const char* str = NULL;
+
+    switch (status) {
+        case ElaConnectionStatus_Connected:
+            str = "connected";
+            break;
+        case ElaConnectionStatus_Disconnected:
+            str = "disconnected";
+            break;
+        default:
+            str = "unknown";
+            break;
+    }
+    return str;
+}

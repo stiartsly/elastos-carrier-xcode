@@ -436,6 +436,7 @@ static void sinit(TestContext *context, int argc, char *argv[])
     } else {
         robot_log_debug("session init success.\n");
         sctxt->extra->init_flag = 1;
+        robot_ack("sinit success\n");
     }
 }
 
@@ -520,8 +521,8 @@ static void sreply(TestContext *context, int argc, char *argv[])
     }
 
     if (strcmp(argv[1], "confirm") == 0) {
-        int stream_type    = atoi(argv[3]);
-        int stream_options = atoi(argv[4]);
+        int stream_type    = atoi(argv[2]);
+        int stream_options = atoi(argv[3]);
 
         stream_ctxt->stream_id = ela_session_add_stream(sctxt->session,
                     stream_type, stream_options, stream_ctxt->cbs, stream_ctxt);

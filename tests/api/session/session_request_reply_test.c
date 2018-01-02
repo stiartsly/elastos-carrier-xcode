@@ -38,6 +38,9 @@ static void friend_connection_cb(ElaCarrier *w, const char *friendid,
 
     wakeup(context);
     wctxt->robot_online = (status == ElaConnectionStatus_Connected);
+
+    test_log_debug("Test node connection status changed -> %s\n",
+                    connection_str(status));
 }
 
 static ElaCallbacks callbacks = {
@@ -312,7 +315,6 @@ cleanup:
 static inline
 void session_request(void)
 {
-    //if (test_context.carrier->extra->robot_online == false)
     test_stream_scheme(ElaStreamType_text, 0, &test_context, NULL);
 }
 

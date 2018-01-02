@@ -36,24 +36,6 @@ void print_friend_info(const ElaFriendInfo* info, int order)
     robot_log_debug("     presence: %s\n", info->presence);
 }
 
-static const char* status2str(enum ElaConnectionStatus status)
-{
-    const char* str = NULL;
-
-    switch (status) {
-        case ElaConnectionStatus_Connected:
-            str = "connected";
-            break;
-        case ElaConnectionStatus_Disconnected:
-            str = "disconnected";
-            break;
-        default:
-            str = "unknown";
-            break;
-    }
-    return str;
-}
-
 static void idle_cb(ElaCarrier *w, void *context)
 {
     char *cmd = read_cmd();
@@ -67,8 +49,8 @@ static void idle_cb(ElaCarrier *w, void *context)
 static void connection_status_cb(ElaCarrier *w, ElaConnectionStatus status,
                                  void *context)
 {
-    robot_log_debug("Carrier connection status changed -> %s\n",
-                    status2str(status));
+    robot_log_debug("Robot connection status changed -> %s\n",
+                    connection_str(status));
 }
 
 static void ready_cb(ElaCarrier *w, void *context)
@@ -121,7 +103,7 @@ static void friend_connection_cb(ElaCarrier *w, const char *friendid,
                                  ElaConnectionStatus status, void *context)
 {
     robot_log_debug("Friend %s's connection status changed -> %s\n",
-                    friendid, status2str(status));
+                    friendid, connection_str(status));
 }
 
 static void friend_info_cb(ElaCarrier *w, const char *friendid,
