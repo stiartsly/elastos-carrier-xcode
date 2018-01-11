@@ -82,31 +82,10 @@ static void test_get_userid(void)
     CU_ASSERT_TRUE(ela_id_is_valid(userid));
 }
 
-static void test_get_login(void)
-{
-    CarrierContext *wctxt = test_context.carrier;
-    char login[ELA_MAX_ID_LEN + 1];
-    char userid[ELA_MAX_ID_LEN + 1];
-    char nodeid[ELA_MAX_ID_LEN + 1];
-    char *p;
-    char *u;
-    char *n;
-
-    p = ela_get_login(wctxt->carrier, login, sizeof(login));
-    CU_ASSERT_PTR_NOT_NULL(p);
-    CU_ASSERT_TRUE(ela_id_is_valid(p));
-    u = ela_get_userid(wctxt->carrier, userid, sizeof(userid));
-    CU_ASSERT_STRING_EQUAL(p, u);
-    n = ela_get_nodeid(wctxt->carrier, nodeid, sizeof(nodeid));
-    CU_ASSERT_STRING_EQUAL(p, n);
-    CU_ASSERT_STRING_EQUAL(u, n);
-}
-
 static CU_TestInfo cases[] = {
     { "test_get_address",test_get_address },
     { "test_get_nodeid", test_get_nodeid },
     { "test_get_userid", test_get_userid },
-    { "test_get_login",  test_get_login },
     { NULL, NULL }
 };
 

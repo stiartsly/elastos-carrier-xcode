@@ -4,7 +4,6 @@
 DECL_TESTSUITE(check_id_test)
 DECL_TESTSUITE(get_id_test)
 DECL_TESTSUITE(get_info_test)
-DECL_TESTSUITE(node_login_test)
 DECL_TESTSUITE(friend_request_test)
 DECL_TESTSUITE(friend_label_test)
 DECL_TESTSUITE(friend_message_test)
@@ -14,7 +13,6 @@ DECL_TESTSUITE(friend_invite_test)
     DEFINE_TESTSUITE(check_id_test), \
     DEFINE_TESTSUITE(get_id_test), \
     DEFINE_TESTSUITE(get_info_test), \
-    DEFINE_TESTSUITE(node_login_test), \
     DEFINE_TESTSUITE(friend_request_test), \
     DEFINE_TESTSUITE(friend_label_test), \
     DEFINE_TESTSUITE(friend_message_test),\

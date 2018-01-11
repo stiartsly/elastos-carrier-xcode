@@ -658,8 +658,6 @@ static void spfsvcadd(TestContext *context, int argc, char *argv[])
 
     if (strcmp(argv[2], "tcp") == 0)
         protocol = PortForwardingProtocol_TCP;
-    else if (strcmp(argv[2], "udp") == 0)
-        protocol = PortForwardingProtocol_UDP;
     else {
         robot_log_error("Invalid portforwarding protocol: %s\n", argv[2]);
         robot_ack("spfsvcadd failed\n");
@@ -700,8 +698,6 @@ static void spf_open(TestContext *context, int argc, char *argv[])
 
     if (strcmp(argv[2], "tcp") == 0)
         protocol = PortForwardingProtocol_TCP;
-    else if (strcmp(argv[2], "udp") == 0)
-        protocol = PortForwardingProtocol_UDP;
     else {
         robot_log_error("Invalid portforwarding protocol %s\n", argv[2]);
         robot_ack("spfopen failed\n");
