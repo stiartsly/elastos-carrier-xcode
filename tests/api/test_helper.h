@@ -36,6 +36,7 @@ typedef struct SessionContext {
 typedef struct CarrierContext {
     ElaCallbacks *cbs;
     ElaCarrier *carrier;
+    Condition *ready_cond;
     Condition *cond;
     pthread_t thread;
     bool robot_online;

@@ -27,7 +27,7 @@ static inline void wakeup(void* context)
 
 static void ready_cb(ElaCarrier *w, void *context)
 {
-    wakeup(context);
+    cond_signal(((CarrierContext *)context)->ready_cond);
 }
 
 static void friend_added_cb(ElaCarrier *w, const ElaFriendInfo *info, void *context)
@@ -48,7 +48,7 @@ static void friend_connection_cb(ElaCarrier *w, const char *friendid,
     wakeup(context);
     wctxt->robot_online = (status == ElaConnectionStatus_Connected);
 
-    test_log_debug("Test node connection status changed -> %s\n",
+    test_log_debug("Robot node connection status changed -> %s\n",
                     connection_str(status));
 }
 
@@ -80,11 +80,13 @@ static ElaCallbacks callbacks = {
     .friend_invite   = NULL
 };
 
+static Condition DEFINE_COND(ready_cond);
 static Condition DEFINE_COND(cond);
 
 static CarrierContext carrier_context = {
     .cbs = &callbacks,
     .carrier = NULL,
+    .ready_cond = &ready_cond,
     .cond = &cond,
     .extra = &extra
 };

@@ -215,8 +215,10 @@ int test_suite_init_ext(TestContext *context, bool udp_disabled)
     }
 
     cond_reset(wctxt->cond);
+    cond_reset(wctxt->ready_cond);
+
     pthread_create(&wctxt->thread, 0, &carrier_run_entry, wctxt);
-    cond_wait(wctxt->cond);
+    cond_wait(wctxt->ready_cond);
 
     return 0;
 }
@@ -269,31 +271,38 @@ int add_friend_anyway(TestContext *context, const char *userid,
 int remove_friend_anyway(TestContext *context, const char *userid)
 {
     CarrierContext *wctxt = context->carrier;
+    int robot_was_online = 0;
     int rc;
 
     if (!ela_is_friend(wctxt->carrier, userid))
         return 0;
 
+    if (wctxt->robot_online)
+        robot_was_online = 1;
+
     rc = ela_remove_friend(wctxt->carrier, userid);
     if (rc < 0) {
-        test_log_error("Error: remove friend error");
+        test_log_error("Error: remove friend error (%x)\n", ela_get_error());
         return rc;
     }
 
-    // wait for friend_presence (offline) callback invoked.
-    cond_wait(wctxt->cond);
+    // wait for friend_connection (offline) callback invoked.
+    if (robot_was_online)
+        cond_wait(wctxt->cond);
 
     // wait for friend_removed callback invoked.
     cond_wait(wctxt->cond);
 
-#if 1
-    char buf[32];
-    char result[32];
+#if 0
+    if (robot_was_online) {
+        char buf[32];
+        char result[32];
 
-    rc = wait_robot_ack("%s %s", buf, result);
-    CU_ASSERT_EQUAL_FATAL(rc, 2);
-    CU_ASSERT_STRING_EQUAL_FATAL(buf, "fremove");
-    CU_ASSERT_STRING_EQUAL_FATAL(result, "success");
+        rc = wait_robot_ack("%s %s", buf, result);
+        CU_ASSERT_EQUAL_FATAL(rc, 2);
+        CU_ASSERT_STRING_EQUAL_FATAL(buf, "fremove");
+        CU_ASSERT_STRING_EQUAL_FATAL(result, "success");
+    }
 #endif
 
     return 0;

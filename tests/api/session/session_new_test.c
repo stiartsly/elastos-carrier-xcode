@@ -16,7 +16,7 @@ static inline void wakeup(void* context)
 
 static void ready_cb(ElaCarrier *w, void *context)
 {
-    wakeup(context);
+    cond_signal(((CarrierContext *)context)->ready_cond);
 }
 
 static
@@ -58,12 +58,14 @@ static ElaCallbacks callbacks = {
     .friend_invite   = NULL
 };
 
-static Condition DEFINE_COND(cond);
+static Condition DEFINE_COND(carrier_ready_cond);
+static Condition DEFINE_COND(carrier_cond);
 
 static CarrierContext carrier_context = {
     .cbs = &callbacks,
     .carrier = NULL,
-    .cond = &cond,
+    .ready_cond = &carrier_ready_cond,
+    .cond = &carrier_cond,
     .extra = NULL,
 };
 

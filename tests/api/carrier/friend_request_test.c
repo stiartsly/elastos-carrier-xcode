@@ -36,7 +36,7 @@ static inline void wakeup(void* context)
 
 static void ready_cb(ElaCarrier *w, void *context)
 {
-    wakeup(context);
+    cond_signal(((CarrierContext *)context)->ready_cond);
 }
 
 static
@@ -59,7 +59,7 @@ static void friend_connection_cb(ElaCarrier *w, const char *friendid,
     wctxt->extra->connection_status = status;
     wctxt->robot_online = (status == ElaConnectionStatus_Connected);
 
-    test_log_debug("Test node connection status changed -> %s\n",
+    test_log_debug("Robot node connection status changed -> %s\n",
                     connection_str(status));
 }
 
@@ -67,6 +67,7 @@ static
 void friend_request_cb(ElaCarrier *w, const char *userid, const ElaUserInfo *info,
                        const char *hello, void* context)
 {
+#if 0
     CarrierContextExtra *extra = ((CarrierContext *)context)->extra;
 
     extra->from  = strdup(userid);
@@ -74,6 +75,7 @@ void friend_request_cb(ElaCarrier *w, const char *userid, const ElaUserInfo *inf
     memcpy(&extra->info, info, sizeof(*info));
 
     wakeup(context);
+#endif
 }
 
 static ElaCallbacks callbacks = {
@@ -92,11 +94,13 @@ static ElaCallbacks callbacks = {
     .friend_invite   = NULL
 };
 
+static Condition DEFINE_COND(ready_cond);
 static Condition DEFINE_COND(cond);
 
 static CarrierContext carrier_context = {
     .cbs = &callbacks,
     .carrier = NULL,
+    .ready_cond = &ready_cond,
     .cond = &cond,
     .extra = &extra
 };
@@ -128,14 +132,14 @@ static void test_add_friend(void)
 
     rc = ela_add_friend(wctxt->carrier, robotaddr, "hello");
     CU_ASSERT_EQUAL_FATAL(rc, 0);
-
     // check whether the robot received friend request.
+#if 0
     char buf[2][32];
     rc = wait_robot_ack("%32s %32s", buf[0], buf[1]);
     CU_ASSERT_EQUAL_FATAL(rc, 2);
     CU_ASSERT_STRING_EQUAL_FATAL(buf[0], "hello");
     CU_ASSERT_STRING_EQUAL_FATAL(buf[1], "hello");
-
+#endif
     ela_get_userid(wctxt->carrier, userid, sizeof(userid));
     rc = robot_ctrl("faccept %s\n", userid);
     CU_ASSERT_FATAL(rc > 0);
@@ -143,7 +147,7 @@ static void test_add_friend(void)
     // wait for friend_added() callback to be invoked.
     cond_wait(wctxt->cond);
     CU_ASSERT_TRUE(ela_is_friend(wctxt->carrier, robotid));
-
+    // wait for friend connection (online) callback to be invoked.
     cond_wait(wctxt->cond);
     CU_ASSERT_TRUE(extra->connection_status == ElaConnectionStatus_Connected);
 }
@@ -167,6 +171,7 @@ static void test_accept_friend(void)
     rc = robot_ctrl("fadd %s %s\n", useraddr, hello);
     CU_ASSERT_FATAL(rc > 0);
 
+#if 0
     // wait for friend_request callback invoked;
     cond_wait(wctxt->cond);
     CU_ASSERT_PTR_NOT_NULL_FATAL(extra->from);
@@ -176,6 +181,7 @@ static void test_accept_friend(void)
     CU_ASSERT_STRING_EQUAL_FATAL(extra->from, extra->info.userid);
     CU_ASSERT_STRING_EQUAL_FATAL(extra->hello, hello);
     //TODO: test robot user info;
+#endif
 
     rc = ela_accept_friend(wctxt->carrier, robotid);
     CU_ASSERT_EQUAL_FATAL(rc, 0);
@@ -184,7 +190,7 @@ static void test_accept_friend(void)
     cond_wait(wctxt->cond);
     CU_ASSERT_TRUE(ela_is_friend(wctxt->carrier, robotid));
 
-    // wait for friend presence (online) callback invoked.
+    // wait for friend connection (online) callback invoked.
     cond_wait(wctxt->cond);
     CU_ASSERT_TRUE(extra->connection_status == ElaConnectionStatus_Connected);
 }
@@ -196,8 +202,6 @@ static void test_add_friend_be_friend(void)
 
     test_context.context_reset(&test_context);
 
-    remove_friend_anyway(&test_context, robotid);
-    
     rc = add_friend_anyway(&test_context, robotid, robotaddr);
     CU_ASSERT_EQUAL_FATAL(rc, 0);
     CU_ASSERT_TRUE_FATAL(ela_is_friend(wctxt->carrier, robotid));

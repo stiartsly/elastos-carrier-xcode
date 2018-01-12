@@ -6,14 +6,9 @@
 #include "tests.h"
 #include "test_helper.h"
 
-static inline void wakeup(void* context)
-{
-    cond_signal(((CarrierContext *)context)->cond);
-}
-
 static void ready_cb(ElaCarrier *w, void *context)
 {
-    wakeup(context);
+    cond_signal(((CarrierContext *)context)->ready_cond);
 }
 
 static ElaCallbacks callbacks = {
@@ -32,11 +27,13 @@ static ElaCallbacks callbacks = {
     .friend_invite   = NULL
 };
 
+static Condition DEFINE_COND(ready_cond);
 static Condition DEFINE_COND(cond);
 
 static CarrierContext carrier_context = {
     .cbs = &callbacks,
     .carrier = NULL,
+    .ready_cond = &ready_cond,
     .cond = &cond,
     .extra = NULL
 };

@@ -21,7 +21,7 @@ static inline void wakeup(void* context)
 
 static void ready_cb(ElaCarrier *w, void *context)
 {
-    wakeup(context);
+    cond_signal(((CarrierContext *)context)->ready_cond);
 }
 
 static
@@ -63,11 +63,13 @@ static ElaCallbacks callbacks = {
     .friend_invite   = NULL
 };
 
+static Condition DEFINE_COND(carrier_ready_cond);
 static Condition DEFINE_COND(carrier_cond);
 
 static struct CarrierContext carrier_context = {
     .cbs = &callbacks,
     .carrier = NULL,
+    .ready_cond = &carrier_ready_cond,
     .cond = &carrier_cond,
     .extra = NULL
 };
@@ -398,11 +400,11 @@ int session_stream_test_suite_init(void)
 {
     int rc;
 
+    srand((unsigned int)time(NULL));
+
     rc = test_suite_init(&test_context);
     if (rc < 0)
         CU_FAIL("Error: test suite initialize error");
-
-    srand((unsigned int)time(NULL));
 
     return rc;
 }

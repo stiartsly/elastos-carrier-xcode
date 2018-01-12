@@ -258,10 +258,13 @@ static void fadd(TestContext *context, int argc, char *argv[])
     CHK_ARGS(argc == 3);
 
     rc = ela_add_friend(w, argv[1], argv[2]);
-    if (rc < 0)
-        robot_log_error("Add user %s to be friend error (0x%x)\n",
-                        argv[1], ela_get_error());
-    else
+    if (rc < 0) {
+        if (ela_get_error() == ELA_GENERAL_ERROR(ELAERR_ALREADY_EXIST))
+            robot_log_debug("User %s already is friend.\n", argv[1]);
+        else
+            robot_log_error("Add user %s to be friend error (0x%x)\n",
+                            argv[1], ela_get_error());
+    } else
         robot_log_debug("Add user %s to be friend success\n", argv[1]);
 }
 
@@ -275,10 +278,13 @@ static void faccept(TestContext *context, int argc, char *argv[])
 
     CHK_ARGS(argc == 2);
     rc = ela_accept_friend(w, argv[1]);
-    if (rc < 0)
-        robot_log_error("Accept friend request from user %s error (0x%x)\n",
-                        argv[1], ela_get_error());
-    else
+    if (rc < 0) {
+        if (ela_get_error() == ELA_GENERAL_ERROR(ELAERR_ALREADY_EXIST))
+            robot_log_debug("User %s already is friend.\n", argv[1]);
+        else
+            robot_log_error("Accept friend request from user %s error (0x%x)\n",
+                            argv[1], ela_get_error());
+    } else
         robot_log_debug("Accept friend request from user %s success\n", argv[1]);
 }
 

@@ -565,6 +565,7 @@ int robot_ack(const char *what, ...)
 
     va_start(ap, what);
     rc = vdprintf(robot_acknowledge[PIPE_OUT], what, ap);
+    fsync(robot_acknowledge[PIPE_OUT]);
     va_end(ap);
 
     robot_log_info("\n>>>>>>>>Acknowledge: ");

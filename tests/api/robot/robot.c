@@ -62,7 +62,7 @@ static void ready_cb(ElaCarrier *w, void *context)
     ela_get_address(w, address, sizeof(address));
     
 
-    robot_log_info("Carrier is ready\n");
+    robot_log_info("Robot is ready\n");
     robot_ack("ready %s %s\n", robotid, address);
 }
 
@@ -145,7 +145,9 @@ static void friend_request_cb(ElaCarrier *w, const char *userid,
         }
 
     } else {
+#if 0
         robot_ack("hello %s\n", hello);
+#endif
     }
 }
 
@@ -160,8 +162,9 @@ static void friend_added_cb(ElaCarrier *w, const ElaFriendInfo *info,
 static void friend_removed_cb(ElaCarrier* w, const char* friendid, void *context)
 {
     robot_log_info("Friend %s is removed\n", friendid);
-
+#if 0
     robot_ack("fremove success\n");
+#endif
 }
 
 static void friend_message_cb(ElaCarrier *w, const char *from,
