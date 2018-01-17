@@ -246,10 +246,8 @@ int add_friend_anyway(TestContext *context, const char *userid,
     int rc;
 
     if (ela_is_friend(wctxt->carrier, userid)) {
-#if 1
         while(!wctxt->robot_online)
             usleep(500);
-#endif
         return 0;
     }
 
@@ -262,7 +260,7 @@ int add_friend_anyway(TestContext *context, const char *userid,
     // wait for friend_added callback invoked.
     cond_wait(wctxt->cond);
 
-    // wait for friend_presence (online) callback invoked.
+    // wait for friend_connection (online) callback invoked.
     cond_wait(wctxt->cond);
 
     return 0;
@@ -271,14 +269,16 @@ int add_friend_anyway(TestContext *context, const char *userid,
 int remove_friend_anyway(TestContext *context, const char *userid)
 {
     CarrierContext *wctxt = context->carrier;
-    int robot_was_online = 0;
     int rc;
 
-    if (!ela_is_friend(wctxt->carrier, userid))
+    if (!ela_is_friend(wctxt->carrier, userid)) {
+        while (wctxt->robot_online)
+            usleep(500);
         return 0;
-
-    if (wctxt->robot_online)
-        robot_was_online = 1;
+    } else {
+        while (!wctxt->robot_online)
+            usleep(500);
+    }
 
     rc = ela_remove_friend(wctxt->carrier, userid);
     if (rc < 0) {
@@ -286,24 +286,11 @@ int remove_friend_anyway(TestContext *context, const char *userid)
         return rc;
     }
 
-    // wait for friend_connection (offline) callback invoked.
-    if (robot_was_online)
-        cond_wait(wctxt->cond);
+    // wait for friend_connection (online -> offline) callback invoked.
+    cond_wait(wctxt->cond);
 
     // wait for friend_removed callback invoked.
     cond_wait(wctxt->cond);
-
-#if 0
-    if (robot_was_online) {
-        char buf[32];
-        char result[32];
-
-        rc = wait_robot_ack("%s %s", buf, result);
-        CU_ASSERT_EQUAL_FATAL(rc, 2);
-        CU_ASSERT_STRING_EQUAL_FATAL(buf, "fremove");
-        CU_ASSERT_STRING_EQUAL_FATAL(result, "success");
-    }
-#endif
 
     return 0;
 }

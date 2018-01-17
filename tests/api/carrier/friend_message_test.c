@@ -48,7 +48,7 @@ static void friend_connection_cb(ElaCarrier *w, const char *friendid,
     wakeup(context);
     wctxt->robot_online = (status == ElaConnectionStatus_Connected);
 
-    test_log_debug("Robot node connection status changed -> %s\n",
+    test_log_debug("Robot connection status changed -> %s\n",
                     connection_str(status));
 }
 

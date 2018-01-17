@@ -39,7 +39,7 @@ typedef struct CarrierContext {
     Condition *ready_cond;
     Condition *cond;
     pthread_t thread;
-    bool robot_online;
+    volatile bool robot_online;
 
     CarrierContextExtra *extra;
 } CarrierContext;

@@ -248,24 +248,24 @@ static void wmready(TestContext *context, int argc, char *argv[])
 }
 
 /*
- * command format: fadd userid hello
+ * command format: fadd userid useraddr hello
  */
 static void fadd(TestContext *context, int argc, char *argv[])
 {
     ElaCarrier *w = context->carrier->carrier;
     int rc;
 
-    CHK_ARGS(argc == 3);
+    CHK_ARGS(argc == 4);
 
-    rc = ela_add_friend(w, argv[1], argv[2]);
+    if (ela_is_friend(w, argv[1]))
+        ela_remove_friend(w, argv[1]);
+
+    rc = ela_add_friend(w, argv[2], argv[3]);
     if (rc < 0) {
-        if (ela_get_error() == ELA_GENERAL_ERROR(ELAERR_ALREADY_EXIST))
-            robot_log_debug("User %s already is friend.\n", argv[1]);
-        else
-            robot_log_error("Add user %s to be friend error (0x%x)\n",
-                            argv[1], ela_get_error());
+        robot_log_error("Add user %s to be friend error (0x%x)\n",
+                         argv[2], ela_get_error());
     } else
-        robot_log_debug("Add user %s to be friend success\n", argv[1]);
+        robot_log_debug("Add user %s to be friend success\n", argv[2]);
 }
 
 /*
@@ -611,6 +611,9 @@ cleanup:
         ela_session_remove_stream(sctxt->session, stream_ctxt->stream_id);
         stream_ctxt->stream_id = -1;
     }
+
+    if (need_sreply_ack && sctxt->session)
+        ela_session_reply_request(sctxt->session, 2, "Error");
 
     if (sctxt->session) {
         ela_session_close(sctxt->session);
