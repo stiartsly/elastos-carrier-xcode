@@ -237,20 +237,20 @@ int robot_main(int argc, char *argv[])
     };
     int i;
 
-    opts.bootstraps = (Bootstrap *)calloc(1, sizeof(Bootstrap) * opts.bootstraps_size);
+    opts.bootstraps = (BootstrapNode *)calloc(1, sizeof(BootstrapNode) * opts.bootstraps_size);
     if (!opts.bootstraps) {
         test_log_error("Error: out of memory.");
         return -1;
     }
 
     for (i = 0 ; i < opts.bootstraps_size; i++) {
-        Bootstrap *b = &opts.bootstraps[i];
+        BootstrapNode *b = &opts.bootstraps[i];
         BootstrapNode *node = global_config.bootstraps[i];
 
         b->ipv4 = node->ipv4;
         b->ipv6 = node->ipv6;
         b->port = node->port;
-        b->address = node->address;
+        b->public_key = node->public_key;
     }
 
     signal(SIGINT,  signal_handler);

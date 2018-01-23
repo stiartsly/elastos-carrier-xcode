@@ -1,6 +1,7 @@
 #ifndef __PFD_CONFIG_H__
 #define __PFD_CONFIG_H__
 
+#include <ela_carrier.h>
 #include <ela_session.h>
 #include <linkedhashtable.h>
 
@@ -19,13 +20,6 @@ typedef struct {
     char *userid;
     char *services[0];
 } PFUser;
-
-typedef struct {
-    char *ipv4;
-    char *ipv6;
-    char *port;
-    char *address;
-} BootstrapNode;
 
 typedef struct {
    bool udp_enabled;

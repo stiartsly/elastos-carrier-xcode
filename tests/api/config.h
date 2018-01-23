@@ -5,13 +5,6 @@
 
 #include "ela_carrier.h"
 
-typedef struct {
-    char *ipv4;
-    char *ipv6;
-    char *port;
-    char *address;
-} BootstrapNode;
-
 typedef struct TestConfig {
     int shuffle;
     int log2file;

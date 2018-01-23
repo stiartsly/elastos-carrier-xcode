@@ -550,7 +550,7 @@ int main(int argc, char *argv[])
     opts.udp_enabled = config->udp_enabled;
     opts.persistent_location = config->datadir;
     opts.bootstraps_size = config->bootstraps_size;
-    opts.bootstraps = (Bootstrap *)calloc(1, sizeof(Bootstrap) * opts.bootstraps_size);
+    opts.bootstraps = (BootstrapNode *)calloc(1, sizeof(BootstrapNode) * opts.bootstraps_size);
     if (!opts.bootstraps) {
         fprintf(stderr, "out of memory.");
         deref(config);
@@ -559,13 +559,13 @@ int main(int argc, char *argv[])
 
     int i;
     for (i = 0 ; i < config->bootstraps_size; i++) {
-        Bootstrap *b = &opts.bootstraps[i];
+        BootstrapNode *b = &opts.bootstraps[i];
         BootstrapNode *node = config->bootstraps[i];
 
         b->ipv4 = node->ipv4;
         b->ipv6 = node->ipv6;
         b->port = node->port;
-        b->address = node->address;
+        b->public_key = node->public_key;
     }
 
     sessions = hashtable_create(16, 1, session_hash_code, session_hash_compare);

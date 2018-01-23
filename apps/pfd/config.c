@@ -141,16 +141,16 @@ static void bootstrap_destroy(void *p)
         return;
 
     if (node->ipv4)
-        free(node->ipv4);
+        free((void *)node->ipv4);
 
     if (node->ipv6)
-        free(node->ipv6);
+        free((void *)node->ipv6);
 
     if (node->port)
-        free(node->port);
+        free((void *)node->port);
 
-    if (node->address)
-        free(node->address);
+    if (node->public_key)
+        free((void *)node->public_key);
 }
 
 PFConfig *load_config(const char *config_file)
@@ -186,7 +186,7 @@ PFConfig *load_config(const char *config_file)
         CFG_STR("ipv4", NULL, CFGF_NONE),
         CFG_STR("ipv6", NULL, CFGF_NONE),
         CFG_STR("port", "33445", CFGF_NONE),
-        CFG_STR("address", NULL, CFGF_NONE),
+        CFG_STR("public_key", NULL, CFGF_NONE),
         CFG_END()
     };
 
@@ -266,27 +266,27 @@ PFConfig *load_config(const char *config_file)
 
         stropt = cfg_getstr(sec, "ipv4");
         if (stropt)
-            node->ipv4 = strdup(stropt);
+            node->ipv4 = (const char *)strdup(stropt);
         else
             node->ipv4 = NULL;
 
         stropt = cfg_getstr(sec, "ipv6");
         if (stropt)
-            node->ipv6 = strdup(stropt);
+            node->ipv6 = (const char *)strdup(stropt);
         else
             node->ipv6 = NULL;
 
         stropt = cfg_getstr(sec, "port");
         if (stropt)
-            node->port = strdup(stropt);
+            node->port = (const char *)strdup(stropt);
         else
             node->port = NULL;
 
-        stropt = cfg_getstr(sec, "address");
+        stropt = cfg_getstr(sec, "pubic_key");
         if (stropt)
-            node->address = strdup(stropt);
+            node->public_key = (const char *)strdup(stropt);
         else
-            node->address = NULL;
+            node->public_key = NULL;
 
         config->bootstraps[i] = node;
     }
