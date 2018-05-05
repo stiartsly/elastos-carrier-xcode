@@ -1,7 +1,9 @@
-Xcode project for Elastos Carrier SDK
+Xcode Workspace for Elastos Carrier SDK
 =====================================
 
-It's xcode project content for Elastos.NET.Carrier.Native.SDK repository.
+## Summary
+
+Here is Apple Xcode workspace for **Elastos.NET.Carrier.Native.SDK** repository to build/compile/debug in convinience way.
 
 ## How to be invovled.
 
@@ -11,6 +13,22 @@ Run following commands to get xcode involved on MacOS:
 $ git clone https://github.com/elastos/Elastos.NET.Carrier.Native.SDK.git
 $ cd Elastos.NET.Carrier.Native.SDK
 $ git clone https://github.com/stiartly/elastos-carrier-xcode.git xcode
+$ cd xcode
+$ open -a Xcode.app elastos.xcworkspace
+```
+Therefore, you can use Apple Xcode to edit/compile/debug Elastos Carrier on MacOS.
+
+
+## Issues
+
+When you compile toxcore target, If you come across problems, just delete all intermediates for toxcore.
+
+```shell
+$ cd Elastos.NET.Carrier.Native.SDK/build/_build/Xcode/debug
+$ rm -rf c-toxcore
 ```
 
-Then use Apple Xcode to open **"xcode"** to load project. Therefore, you can edit/compile/debug Elastos Carrier on MacOS.
+Then clean toxcore and rebuild it.
+
+## License
+MIT

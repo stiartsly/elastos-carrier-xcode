@@ -1,0 +1,249 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A3063DB11FF88A25001405A7 /* config.c in Sources */ = {isa = PBXBuildFile; fileRef = A3063DAE1FF88A25001405A7 /* config.c */; };
+		A3063DB21FF88A25001405A7 /* shell.c in Sources */ = {isa = PBXBuildFile; fileRef = A3063DB01FF88A25001405A7 /* shell.c */; };
+		A3063DB41FF88A96001405A7 /* libconfuse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3063DB81FF88A96001405A7 /* libconfuse.a */; };
+		A3063DB51FF88A96001405A7 /* libelacarrier.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A3063DB91FF88A96001405A7 /* libelacarrier.dylib */; };
+		A3063DB61FF88A96001405A7 /* libelacommon.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A3063DBA1FF88A96001405A7 /* libelacommon.dylib */; };
+		A3063DB71FF88A96001405A7 /* libelasession.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A3063DBB1FF88A96001405A7 /* libelasession.dylib */; };
+		A3063DBD1FF88AB1001405A7 /* libncurses.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A3063DBC1FF88AB1001405A7 /* libncurses.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A3063D9E1FF88958001405A7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A3063DA01FF88958001405A7 /* elashell */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = elashell; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3063DAE1FF88A25001405A7 /* config.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = config.c; path = ../../apps/shell/config.c; sourceTree = "<group>"; };
+		A3063DAF1FF88A25001405A7 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../../apps/shell/config.h; sourceTree = "<group>"; };
+		A3063DB01FF88A25001405A7 /* shell.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = shell.c; path = ../../apps/shell/shell.c; sourceTree = "<group>"; };
+		A3063DB81FF88A96001405A7 /* libconfuse.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libconfuse.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3063DB91FF88A96001405A7 /* libelacarrier.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libelacarrier.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3063DBA1FF88A96001405A7 /* libelacommon.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libelacommon.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3063DBB1FF88A96001405A7 /* libelasession.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libelasession.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3063DBC1FF88AB1001405A7 /* libncurses.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libncurses.tbd; path = usr/lib/libncurses.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3063D9D1FF88958001405A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3063DBD1FF88AB1001405A7 /* libncurses.tbd in Frameworks */,
+				A3063DB41FF88A96001405A7 /* libconfuse.a in Frameworks */,
+				A3063DB51FF88A96001405A7 /* libelacarrier.dylib in Frameworks */,
+				A3063DB61FF88A96001405A7 /* libelacommon.dylib in Frameworks */,
+				A3063DB71FF88A96001405A7 /* libelasession.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A3063D971FF88958001405A7 = {
+			isa = PBXGroup;
+			children = (
+				A3063DAA1FF88991001405A7 /* src */,
+				A3063DA11FF88958001405A7 /* Products */,
+				A3063DB31FF88A96001405A7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A3063DA11FF88958001405A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3063DA01FF88958001405A7 /* elashell */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3063DAA1FF88991001405A7 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A3063DAE1FF88A25001405A7 /* config.c */,
+				A3063DAF1FF88A25001405A7 /* config.h */,
+				A3063DB01FF88A25001405A7 /* shell.c */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		A3063DB31FF88A96001405A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3063DBC1FF88AB1001405A7 /* libncurses.tbd */,
+				A3063DB81FF88A96001405A7 /* libconfuse.a */,
+				A3063DB91FF88A96001405A7 /* libelacarrier.dylib */,
+				A3063DBA1FF88A96001405A7 /* libelacommon.dylib */,
+				A3063DBB1FF88A96001405A7 /* libelasession.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A3063D9F1FF88958001405A7 /* elashell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3063DA71FF88958001405A7 /* Build configuration list for PBXNativeTarget "elashell" */;
+			buildPhases = (
+				A3063D9C1FF88958001405A7 /* Sources */,
+				A3063D9D1FF88958001405A7 /* Frameworks */,
+				A3063D9E1FF88958001405A7 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = elashell;
+			productName = elashell;
+			productReference = A3063DA01FF88958001405A7 /* elashell */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A3063D981FF88958001405A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = org.elastos;
+				TargetAttributes = {
+					A3063D9F1FF88958001405A7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A3063D9B1FF88958001405A7 /* Build configuration list for PBXProject "elashell" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A3063D971FF88958001405A7;
+			productRefGroup = A3063DA11FF88958001405A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A3063D9F1FF88958001405A7 /* elashell */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A3063D9C1FF88958001405A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3063DB21FF88A25001405A7 /* shell.c in Sources */,
+				A3063DB11FF88A25001405A7 /* config.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A3063DA51FF88958001405A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A3063DA81FF88958001405A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/lib";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A3063D9B1FF88958001405A7 /* Build configuration list for PBXProject "elashell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3063DA51FF88958001405A7 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A3063DA71FF88958001405A7 /* Build configuration list for PBXNativeTarget "elashell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3063DA81FF88958001405A7 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A3063D981FF88958001405A7 /* Project object */;
+}
