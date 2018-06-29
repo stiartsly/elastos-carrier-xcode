@@ -12,7 +12,7 @@ Run following commands to get xcode involved on MacOS:
 ```shell
 $ git clone https://github.com/elastos/Elastos.NET.Carrier.Native.SDK.git
 $ cd Elastos.NET.Carrier.Native.SDK
-$ git clone https://github.com/stiartly/elastos-carrier-xcode.git xcode
+$ git clone https://github.com/stiartsly/elastos-carrier-xcode.git xcode
 $ cd xcode
 $ open -a Xcode.app elastos.xcworkspace
 ```
